@@ -43,8 +43,21 @@ async def upload_file(
 
     destination = storage_path / file.filename
 
+    content = await file.read()
+
+    try:
+        text = content.decode("utf-8")
+    except UnicodeDecodeError:
+        raise HTTPException(status_code=400, detail="Invalid file encoding (expected UTF-8)")
+
+    lines = text.splitlines()
+    if lines and lines[0].strip().lower().startswith("sep="):
+        lines = lines[1:]  # remove first line
+        cleaned_text = "\n".join(lines)
+        content = cleaned_text.encode("utf-8")
+
     with destination.open("wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
+        buffer.write(content)
 
     return JSONResponse(
         content={"data": {"message": f"File saved at {destination}"}},
