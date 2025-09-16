@@ -1,0 +1,4 @@
+sep=,
+"flag","Vessel Name","registeredOwner","callSign","MMSI","imo","shipType","destination","eta","navigationStatus","Latitude","Longitude","age","timeOfFix"
+"Malta","AFRICA MERCY","Africa Mercy Malta Ltd","9HEC6","248428000","7803188","6-Passenger","Toamasina","2120600","5-Moored","-18.155883","49.42356","9m05s","2025-08-19T06:13:51.000Z"
+"France","Nowo","null","FAL4360","329028530","0","36-Sailing","","0","15-NotDefined","-15.250725","44.236602","6h07m","2025-08-19T00:15:19.000Z"

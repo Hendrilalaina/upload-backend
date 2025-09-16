@@ -1,0 +1,6 @@
+sep=,
+"flag","Vessel Name","registeredOwner","callSign","MMSI","imo","shipType","destination","eta","navigationStatus","Latitude","Longitude","age","timeOfFix"
+"France","Chambon Bora Iii","null","FO 8721","227004480","0","52-Tug","","0","15-NotDefined","-12.270042","49.287907","4m29s","2025-08-19T07:40:53.000Z"
+"France","French Warship","null","","227819100","9797539","35-MilOps","","8170900","0-Underway(Engine)","-12.267913","49.288162","1m40s","2025-08-19T07:43:42.000Z"
+"Luxembourg","TSARAVATSY","Hiyoshi Kaiun/HY Marine","LXAN4","253000113","9829526","8-Tanker","Mg Die","8172030","5-Moored","-12.2687","49.288115","1m25s","2025-08-19T07:43:57.000Z"
+"Madagascar","BARGE EXPRESS","Colas","5RVI","647521310","8891388","9-Other","Antsiranana","7171800","5-Moored","-12.271062","49.287998","3m40s","2025-08-19T07:41:42.000Z"
