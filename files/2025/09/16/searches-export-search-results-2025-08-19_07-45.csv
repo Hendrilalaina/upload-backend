@@ -1,4 +1,3 @@
-sep=,
 "flag","Vessel Name","registeredOwner","callSign","MMSI","imo","shipType","destination","eta","navigationStatus","Latitude","Longitude","age","timeOfFix"
 "France","Chambon Bora Iii","null","FO 8721","227004480","0","52-Tug","","0","15-NotDefined","-12.270042","49.287907","4m29s","2025-08-19T07:40:53.000Z"
 "France","French Warship","null","","227819100","9797539","35-MilOps","","8170900","0-Underway(Engine)","-12.267913","49.288162","1m40s","2025-08-19T07:43:42.000Z"

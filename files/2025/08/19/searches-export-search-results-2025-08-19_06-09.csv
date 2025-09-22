@@ -1,4 +1,3 @@
-sep=,
 "flag","Vessel Name","registeredOwner","callSign","MMSI","imo","shipType","destination","eta","navigationStatus","Latitude","Longitude","age","timeOfFix"
 "Greece","MARAN LUPUS","Aeolos Maritime Inc","SVDJ2","241724000","9418066","8-Tanker","Capetown","8252300","0-Underway(Engine)","-28.05485","44.2103","14m41s","2025-08-19T05:54:39.000Z"
 "Malta","KALLIOPI","Fairtrans Co Inc Ltd-MTA","9HA2555","248869000","9508859","8-Tanker","Waf","9010500","0-Underway(Engine)","-26.734142","45.045483","48m09s","2025-08-19T05:21:11.000Z"

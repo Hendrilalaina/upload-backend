@@ -1,10 +1,11 @@
-from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Query
 from fastapi.responses import JSONResponse, FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
 from datetime import date, datetime
 import shutil
 import os
+import calendar
 
 app = FastAPI(title="File Upload App")
 
@@ -64,6 +65,30 @@ async def upload_file(
         status_code=201,
     )
 
+@app.get("/calendar/month")
+async def month_overview(
+    year: int = Query(..., ge=1900, le=2100, description="Year"),
+    month: int = Query(..., ge=1, le=12, description="Month (1-12)"),
+):
+    """
+    Return all days of a given month with boolean values:
+    - true if at least one CSV exists for that day
+    - false otherwise
+    Example: {"1": false, "2": true, ...}
+    """
+    try:
+        _, num_days = calendar.monthrange(year, month)
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid year or month")
+
+    result = {}
+    for day in range(1, num_days + 1):
+        d = date(year, month, day)
+        storage_path = build_storage_path(d)
+        has_file = storage_path.exists() and any(storage_path.iterdir())
+        result[str(day)] = has_file
+
+    return {"data": result}
 
 @app.get("/files/dates")
 async def list_dates():
@@ -121,3 +146,4 @@ async def download_file(file_date: str, filename: str):
         raise HTTPException(status_code=404, detail="File not found")
 
     return FileResponse(file_path, filename=filename)
+

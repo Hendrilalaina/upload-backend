@@ -1,4 +1,3 @@
-sep=,
 "flag","Vessel Name","registeredOwner","callSign","MMSI","imo","shipType","destination","eta","navigationStatus","Latitude","Longitude","age","timeOfFix"
 "Cyprus","OCEANIA GRAECA","Oceania Graeca Navigation Ltd","5BGD5","209623000","9841952","7-Cargo","Mu Plu","8201000","0-Underway(Engine)","-27.752635","46.372705","17m47s","2025-08-19T05:32:42.000Z"
 "Malta","AP JADRAN","Atlant Ice Panamax Corp","9HA5388","215945000","9511246","7-Cargo","Za Rcb","8211200","0-Underway(Engine)","-24.821052","47.777853","18m18s","2025-08-19T05:32:11.000Z"
